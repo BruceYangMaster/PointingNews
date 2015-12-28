@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--右边图片区-->
+    <ImageView
+        android:id="@+id/id_item_xlistview_img_imageview"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_launcher"
+        android:layout_width="100dp"
+        android:layout_height="70dp" />
+
+    <!--title-->
+    <TextView
+        android:id="@+id/id_item_xlistview_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/id_item_xlistview_img_imageview"
+        android:text="央行发金融支持3大自贸区意见"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"/>
+
+    <!--下部评论，和时间-->
+    <RelativeLayout
+        android:layout_below="@id/id_item_xlistview_title_textview"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/id_item_xlistview_priority_icon"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/hoticon_textpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/id_item_xlistview_source_textview"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/id_item_xlistview_priority_icon"
+            android:text="新华网"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/id_item_xlistview_replaycount_textview"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/id_item_xlistview_source_textview"
+            android:layout_marginLeft="10dp"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/id_item_xlistview_comment_textview"
+            android:layout_toRightOf="@id/id_item_xlistview_replaycount_textview"
+            android:text="评论"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/id_item_xlistview_time_textview"
+            android:layout_toRightOf="@id/id_item_xlistview_comment_textview"
+            android:layout_centerVertical="true"
+            android:text="0分钟前"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

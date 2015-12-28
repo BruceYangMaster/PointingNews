@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.pointingnews.customwidget.MyTitleView
+        android:id="@+id/id_news_content_my_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tv:title_text="指点新闻" />
+
+
+    <ProgressBar
+        android:id="@+id/id_activity_news_content_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/id_news_content_my_title_view"
+        android:indeterminate="false" />
+
+    <!--新闻内容区域-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_activity_news_content_progressbar"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/id_activity_news_content_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/id_activity_news_content_source_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/id_activity_news_content_title_textview"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/id_activity_news_content_time_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_activity_news_content_title_textview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/id_activity_news_content_source_textview"
+                android:text="2015-12-12 03:55" />
+
+            <FrameLayout
+                android:id="@+id/id_activity_news_conent_img_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_activity_news_content_time_textview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/id_activity_news_conent_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/id_activity_news_content_img_count_textview"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/slide_menu_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+
+            <WebView
+                android:id="@+id/id_activity_news_conent_webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_activity_news_conent_img_layout"
+                android:layout_marginTop="5dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!--写评论区域-->
+    <RelativeLayout
+        android:id="@+id/id_activity_news_content_review_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/MainActivity_tab_back">
+
+        <ImageView
+            android:id="@+id/id_activity_news_content_share_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_news_content_share_img"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/id_activity_news_content_love_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/id_activity_news_content_share_imageview"
+            android:background="@drawable/selector_news_content_love_img"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/id_activity_news_content_review_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/id_activity_news_content_love_imageview"
+            android:background="@drawable/selector_news_content_review_img"
+            android:clickable="true" />
+
+        <EditText
+            android:id="@+id/id_activity_news_content_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/id_activity_news_content_review_imageview"
+            android:hint="@string/news_cotent_edit_hint" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

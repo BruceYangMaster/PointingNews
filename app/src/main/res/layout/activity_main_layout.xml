@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/id_activity_main_radiogroup"
+        android:background="@color/MainActivity_tab_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/id_activity_main_homepage_radiobutton"
+            style="@style/MainTabRaidoButton"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_tab_radio_home_draw_color"
+            android:text="@string/tab_homepage_txt" />
+
+        <RadioButton
+            android:id="@+id/id_activity_main__video_radiobutton"
+            style="@style/MainTabRaidoButton"
+            android:drawableTop="@drawable/selector_tab_radio_video_draw_color"
+            android:text="@string/tab_video_txt" />
+
+        <RadioButton
+            android:id="@+id/id_activity_main_topic_radiobutton"
+            style="@style/MainTabRaidoButton"
+            android:drawableTop="@drawable/selector_tab_radio_topic_draw_color"
+            android:text="@string/tab_topic_txt" />
+
+        <RadioButton
+            android:id="@+id/id_activity_main_mine_radiobutton"
+            style="@style/MainTabRaidoButton"
+            android:drawableTop="@drawable/selector_tab_radio_mine_draw_color"
+            android:text="@string/tab_mine_txt" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/id_activity_main_fragment_container_layout"
+        android:layout_above="@id/id_activity_main_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

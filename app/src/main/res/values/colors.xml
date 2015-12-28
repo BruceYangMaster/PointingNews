@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="titleRed">#D43D3D</color>
+    <color name="tabTxtDark">#757676</color>
+    <color name="cirleImagBorder">#FFD9D9</color>
+    <color name="homeFragmentTitleText">#F1C1C1</color>
+    <color name="MainActivity_tab_back">#F4F5F6</color>
+    <color name="photo_back">#000000</color>
+    <color name="slide_menu_color">#2B2B2B</color>
+</resources>

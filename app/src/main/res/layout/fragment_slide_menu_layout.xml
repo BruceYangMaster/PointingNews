@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/slide_menu_color">
+
+    <!--登陆方式-->
+    <LinearLayout
+        android:id="@+id/id_slide_menu_fragment_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/account_icon_mobile" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/account_icon_qzone" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/account_icon_weibo" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/account_icon_weixin" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_slide_menu_fragment_login_more_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/id_slide_menu_fragment_login_layout"
+        android:layout_below="@id/id_slide_menu_fragment_login_layout"
+        android:gravity="center_horizontal"
+        android:text="@string/more_login"
+        android:textColor="@android:color/white" />
+
+    <!--slideMenu主要内同区域-->
+    <ScrollView
+        android:id="@+id/id_slide_menu_fragment_content_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_slide_menu_fragment_login_more_textview">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/activityicon_leftdrawer"
+                android:drawablePadding="50dp"
+                android:text="我的活动"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/applyicon_leftdrawer"
+                android:drawablePadding="50dp"
+                android:text="我的赞赏"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/dynamicicon_leftdrawer"
+                android:drawablePadding="50dp"
+                android:text="好友动态"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/favoriteicon_leftdrawer"
+                android:drawablePadding="50dp"
+                android:text="我的收藏"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/feedbackicon_leftdrawer"
+                android:drawablePadding="50dp"
+                android:text="我的反馈"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/pgcicon_leftdrawer"
+                android:drawablePadding="50dp"
+                android:text="我的评论"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/sellicon_leftdrawer"
+                android:drawablePadding="50dp"
+                android:text="我的商城"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/topicicon_leftdrawer"
+                android:drawablePadding="50dp"
+                android:text="我的话题"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--SlideMenu下面tab页-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:id="@+id/id_slide_menu_fragment__mode_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableTop="@drawable/menu_round_btn_day"
+            android:gravity="center_horizontal"
+            android:text="日间模式"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/id_slide_menu_fragment_login_download_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@id/id_slide_menu_fragment__mode_textview"
+            android:drawableTop="@drawable/menu_round_btn_offline"
+            android:gravity="center_horizontal"
+            android:text="离线下载"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/id_slide_menu_fragment_login_setting_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/id_slide_menu_fragment__mode_textview"
+            android:drawableTop="@drawable/settingicon_leftdrawer_pressed"
+            android:gravity="center_horizontal"
+            android:text="设置"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
